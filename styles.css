@@ -274,7 +274,6 @@ p {
 
 .hero-proof span,
 .audit-row span,
-.resource-links span,
 .resource-links a {
   border: 1px solid var(--line-soft);
   border-radius: 999px;
@@ -558,6 +557,15 @@ p {
 
 .resource-links a:hover {
   border-color: rgba(104, 199, 182, 0.5);
+}
+
+.resource-links a[aria-disabled="true"] {
+  color: var(--muted);
+  cursor: default;
+}
+
+.resource-links a[aria-disabled="true"]:hover {
+  border-color: var(--line-soft);
 }
 
 .waitlist-form {
