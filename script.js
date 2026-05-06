@@ -15,9 +15,3 @@ if (waitlistForm && successMessage) {
     waitlistForm.reset();
   });
 }
-
-document.querySelectorAll("[data-placeholder-link]").forEach((link) => {
-  link.addEventListener("click", (event) => {
-    event.preventDefault();
-  });
-});

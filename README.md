@@ -19,6 +19,8 @@ http://localhost:8080
 ## Files
 
 - `index.html` - landing page content and metadata
+- `docs.html` - product overview, compatibility, support, and compliance notes
+- `privacy.html` - basic privacy notes for beta email and AI usage
 - `styles.css` - responsive dark SaaS styling
 - `script.js` - beta waitlist success-state behavior
 - `CNAME` - GitHub Pages custom domain
@@ -73,7 +75,9 @@ For the `www` subdomain, create a `CNAME` record:
 www.caseflowlabs.store CNAME mcincura.github.io
 ```
 
-Do not use wildcard DNS records for GitHub Pages.
+The `www` record must point directly to `mcincura.github.io`, not to
+`caseflowlabs.store` and not to the repository URL. Do not use wildcard DNS
+records for GitHub Pages.
 
 ## Deployment With GitHub CLI
 

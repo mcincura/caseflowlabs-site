@@ -25,11 +25,13 @@
 
 html {
   scroll-behavior: smooth;
+  overflow-x: clip;
 }
 
 body {
   margin: 0;
   min-width: 320px;
+  overflow-x: clip;
   background:
     linear-gradient(180deg, rgba(214, 182, 109, 0.07) 0, transparent 420px),
     var(--bg);
@@ -162,7 +164,7 @@ button:focus-visible {
 
 .hero {
   display: grid;
-  grid-template-columns: minmax(0, 1fr) minmax(360px, 0.88fr);
+  grid-template-columns: minmax(0, 1fr) minmax(320px, 0.88fr);
   align-items: center;
   gap: 56px;
   min-height: calc(100vh - 77px);
@@ -170,6 +172,7 @@ button:focus-visible {
 }
 
 .hero-copy {
+  min-width: 0;
   max-width: 720px;
 }
 
@@ -187,6 +190,7 @@ h2,
 h3,
 p {
   margin-top: 0;
+  overflow-wrap: break-word;
 }
 
 h1,
@@ -293,6 +297,8 @@ p {
 }
 
 .case-panel {
+  min-width: 0;
+  max-width: 100%;
   box-shadow: var(--shadow);
   padding: 20px;
 }
@@ -559,15 +565,6 @@ p {
   border-color: rgba(104, 199, 182, 0.5);
 }
 
-.resource-links a[aria-disabled="true"] {
-  color: var(--muted);
-  cursor: default;
-}
-
-.resource-links a[aria-disabled="true"]:hover {
-  border-color: var(--line-soft);
-}
-
 .waitlist-form {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
@@ -638,6 +635,55 @@ p {
   display: block;
 }
 
+.subpage .subpage-hero {
+  padding-block: 72px 38px;
+}
+
+.subpage h1 {
+  max-width: 13ch;
+}
+
+.doc-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 12px;
+  padding-top: 24px;
+}
+
+.doc-grid.single-column {
+  max-width: 860px;
+  grid-template-columns: 1fr;
+}
+
+.doc-card {
+  border: 1px solid var(--line-soft);
+  border-radius: var(--radius);
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.045), rgba(255, 255, 255, 0.02));
+  padding: 22px;
+}
+
+.doc-card h2 {
+  font-size: clamp(24px, 3vw, 34px);
+}
+
+.doc-card ul {
+  display: grid;
+  gap: 10px;
+  margin: 0;
+  padding-left: 20px;
+  color: var(--muted);
+}
+
+.doc-card li::marker {
+  color: var(--gold-strong);
+}
+
+.doc-card a {
+  color: var(--teal);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
 @media (max-width: 980px) {
   .hero,
   .trust-layout,
@@ -656,7 +702,8 @@ p {
 
   .process-grid,
   .feature-grid,
-  .pricing-grid {
+  .pricing-grid,
+  .doc-grid {
     grid-template-columns: repeat(2, 1fr);
   }
 
@@ -673,9 +720,12 @@ p {
   }
 
   .nav {
+    flex-wrap: wrap;
     justify-content: flex-start;
-    overflow-x: auto;
-    padding-bottom: 2px;
+    gap: 4px;
+    overflow-x: visible;
+    padding-bottom: 0;
+    font-size: 13px;
   }
 
   .section-shell {
@@ -689,12 +739,30 @@ p {
   }
 
   h1 {
-    max-width: none;
-    font-size: clamp(40px, 12vw, 56px);
+    max-width: 11.5ch;
+    font-size: clamp(34px, 9.5vw, 42px);
+    line-height: 1.06;
+  }
+
+  .hero,
+  .hero-copy,
+  .case-panel,
+  .section-heading {
+    min-width: 0;
+    max-width: 100%;
   }
 
   .hero-subtext {
+    max-width: 31ch;
     font-size: 17px;
+  }
+
+  .hero-proof {
+    max-width: 100%;
+  }
+
+  .hero-proof span {
+    max-width: 100%;
   }
 
   .cta-row,
@@ -705,7 +773,8 @@ p {
   .process-grid,
   .feature-grid,
   .pricing-grid,
-  .waitlist-form {
+  .waitlist-form,
+  .doc-grid {
     grid-template-columns: 1fr;
   }
 
@@ -722,6 +791,36 @@ p {
 
   .audit-row span {
     width: 100%;
+  }
+}
+
+@media (max-width: 430px) {
+  .site-header {
+    padding-inline: 14px;
+  }
+
+  .section-shell {
+    width: min(100% - 24px, var(--max));
+  }
+
+  .hero {
+    gap: 32px;
+    padding-block: 44px 56px;
+  }
+
+  h1 {
+    max-width: 10.5ch;
+    font-size: clamp(32px, 9vw, 36px);
+  }
+
+  .case-panel,
+  .waitlist-form,
+  .process-step,
+  .feature-card,
+  .pricing-card,
+  .trust-list article,
+  .doc-card {
+    padding: 16px;
   }
 }
 
