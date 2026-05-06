@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630" role="img" aria-labelledby="title desc">
+  <title id="title">CaseFlow AI by CaseFlow Labs</title>
+  <desc id="desc">AI-assisted warrant and case review for serious FiveM RP servers.</desc>
+  <rect width="1200" height="630" fill="#101214"/>
+  <path d="M0 0h1200v630H0z" fill="#101214"/>
+  <path d="M80 88h1040v454H80z" fill="#151719" stroke="#34383b" stroke-width="2"/>
+  <path d="M130 146h58v58h-58z" fill="#1b1e20" stroke="#d6b66d" stroke-width="2"/>
+  <text x="159" y="182" text-anchor="middle" fill="#f0cb78" font-family="Inter, Arial, sans-serif" font-size="22" font-weight="800">CF</text>
+  <text x="218" y="173" fill="#f2eee4" font-family="Inter, Arial, sans-serif" font-size="28" font-weight="800">CaseFlow AI</text>
+  <text x="218" y="202" fill="#b7b0a1" font-family="Inter, Arial, sans-serif" font-size="18">CaseFlow Labs</text>
+  <text x="130" y="304" fill="#f2eee4" font-family="Inter, Arial, sans-serif" font-size="58" font-weight="900">AI-assisted warrant and</text>
+  <text x="130" y="372" fill="#f2eee4" font-family="Inter, Arial, sans-serif" font-size="58" font-weight="900">case review for FiveM RP</text>
+  <text x="130" y="438" fill="#d2cabd" font-family="Inter, Arial, sans-serif" font-size="25">Structured case decisions, audit logs, staff controls, and human override.</text>
+  <rect x="784" y="158" width="280" height="314" rx="8" fill="#1b1e20" stroke="#34383b"/>
+  <rect x="818" y="200" width="126" height="18" fill="#d6b66d"/>
+  <rect x="818" y="238" width="210" height="14" fill="#817b70"/>
+  <rect x="818" y="270" width="210" height="14" fill="#817b70"/>
+  <rect x="818" y="318" width="210" height="86" rx="8" fill="#162825" stroke="#68c7b6"/>
+  <rect x="818" y="430" width="156" height="18" fill="#68c7b6"/>
+</svg>
